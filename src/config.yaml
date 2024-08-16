@@ -5,7 +5,7 @@ site:
   trailingSlash: false
 
   googleSiteVerificationId: ztrKIGMrkepuJK3xomD4VAIxicByn5gq0xowfCrZo_c
-  
+
 # Default SEO metadata
 metadata:
   title:
@@ -66,7 +66,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: "G-9YJNP2WWM0" # or "G-XXXXXXXXXX"
+      id: "G-BKRWWKCKDV" # or "G-XXXXXXXXXX"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

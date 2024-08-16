@@ -17,6 +17,8 @@ import { ViewTransitions } from 'astro:transitions';
 
 import type { MetaData as MetaDataType } from '~/types';
 
+import  SpeedInsights  from "@vercel/speed-insights/astro"
+
 export interface Props {
   metadata?: MetaDataType;
 }
@@ -35,6 +37,8 @@ const { language, textDirection } = I18N;
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
+    <SpeedInsights/>
+    
 
     <!-- Comment the line below to disable View Transitions -->
     <ViewTransitions fallback="swap" />

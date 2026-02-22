@@ -18,7 +18,7 @@ import {
   lazyImagesRehypePlugin,
 } from './src/utils/frontmatter.mjs';
 
-import vercel from '@astrojs/vercel/serverless';
+// import vercel from '@astrojs/vercel/serverless';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -27,7 +27,7 @@ const whenExternalScripts = (items = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'hybrid',
+  output: 'static',
 
   integrations: [
     tailwind({
@@ -93,7 +93,7 @@ export default defineConfig({
     },
   },
 
-  adapter: vercel({
-    webAnalytics: { enabled: true },
-  }),
+  // adapter: vercel({
+  //   webAnalytics: { enabled: true },
+  // }),
 });

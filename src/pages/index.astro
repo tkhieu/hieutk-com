@@ -6,13 +6,12 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Hieu Tran (Trần Kim Hiếu) - Tech Leader & Innovation Expert',
+  title: 'Hieu Tran — Principal Engineer | Architecture · AI · Leadership',
 };
 ---
 
@@ -23,15 +22,14 @@ const metadata = {
       links={[
         { text: 'Home', href: '#' },
         { text: 'About', href: '#about' },
-        { text: 'Resume', href: '#resume' },
-        { text: 'Porfolio', href: '#porfolio' },
+        { text: 'Experience', href: '#resume' },
+        { text: 'Portfolio', href: '#portfolio' },
         { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/onwidget' },
       ]}
       actions={[
         {
-          text: 'Contact Now',
-          href: '#',
+          text: 'Connect on LinkedIn',
+          href: 'https://www.linkedin.com/in/trankimhieu',
         },
       ]}
       isSticky
@@ -39,25 +37,24 @@ const metadata = {
     />
   </Fragment>
 
-  <!-- Hero2 Widget ******************* -->
+  <!-- Hero Widget -->
 
   <Hero
     id="hero"
     title="Hieu Tran"
-    tagline="Trần Kim Hiếu"
-    actions={[{ variant: 'primary', text: '60 Minute Free Consultation', href: getPermalink('/contact#form') }]}
+    tagline="Principal Engineer · Da Nang, Vietnam"
+    actions={[
+      { variant: 'primary', text: 'View My Work', href: '#portfolio' },
+      { text: 'Get in Touch', href: 'https://www.linkedin.com/in/trankimhieu' },
+    ]}
   >
     <Fragment slot="subtitle">
-      🚀 Mastering tech standards, strategy, and cutting-edge research!<br />
-      💼 Seasoned leader in software development, project orchestration, and delivering exceptional customer satisfaction.<br />
-      💸 Powering SaaS growth with £10M MRR!<br />
-      🌐 Championing technical sales in BFSI, Digital Transformation, and Cloud innovation.<br />
-      👥 Let’s connect and align your vision with my expertise!<br />
-      📈 #TechLeader #InnovationExpert #DrivingSuccess<br />
+      12+ years building systems that scale, leading teams that ship, and turning complex problems into elegant solutions.<br /><br />
+      I specialize in <strong>distributed architecture</strong>, <strong>cloud infrastructure</strong>, and <strong>AI adoption</strong> — helping companies modernize their tech stack and engineering culture.
     </Fragment>
   </Hero>
 
-  <!-- Content Widget **************** -->
+  <!-- About Widget -->
 
   <Content
     id="about"
@@ -68,7 +65,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'GitHub',
-          href: 'https://github.com/tkhieu?ref=hieutk.com',
+          href: 'https://github.com/tkhieu',
         },
       },
       {
@@ -76,32 +73,37 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'LinkedIn',
-          href: 'https://www.linkedin.com/in/trankimhieu?ref=hieutk.com',
+          href: 'https://www.linkedin.com/in/trankimhieu',
+        },
+      },
+      {
+        icon: 'tabler:brand-x',
+        callToAction: {
+          target: '_blank',
+          text: 'X / Twitter',
+          href: 'https://x.com/hieutk_',
         },
       },
     ]}
     image={{
       src: 'https://hieutranspace.imgix.net/photos/HieuTranPhoto.jpg?auto=format&fit=crop&crop=top',
-      alt: 'Hieu Tran Image',
+      alt: 'Hieu Tran',
       loading: 'eager',
     }}
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
       <p>
-        Welcome to my world of technology and innovation! My journey in tech is fueled by a passion for transforming ideas into robust, scalable solutions. With a deep expertise in software development, architecture, and cloud-based systems, I strive to push the boundaries of what technology can achieve.
+        I'm a Principal Engineer based in Da Nang, Vietnam, with over 12 years of experience building software that matters. My journey has taken me from writing my first .NET applications to architecting systems that handle millions in revenue.
       </p>
       <br />
       <p>
-        Inspired by the evolving landscape of technology, I lead teams with a vision for growth, driving SaaS products that generate millions in revenue and redefining technical sales in industries like BFSI, digital transformation, and cloud computing. My commitment to excellence is reflected in my work, whether it's migrating complex systems to modern architectures or leading a team to new heights of success.
+        What drives me is the intersection of <strong>great architecture and great teams</strong>. I've led engineering organizations, migrated legacy monoliths to cloud-native microservices, and helped companies adopt AI into their workflows — always with a focus on pragmatic solutions over hype.
       </p>
       <br />
       <p>
-        Outside the realm of code and infrastructure, I find inspiration in the continuous pursuit of knowledge and the dynamic challenges that each new project presents. If you're looking to explore my work or discuss how we can collaborate, let's connect and turn ideas into reality.
+        When I'm not deep in code or architecture diagrams, you'll find me exploring the latest in AI tooling, contributing to open source, or mentoring the next generation of Vietnamese engineers. I believe the best technology serves people — and the best engineers never stop learning.
       </p>
-      <br />
-      📈 #TechLeader #InnovationExpert #DrivingSuccess
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -109,133 +111,153 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
+  <!-- Work Experience -->
 
   <Steps
     id="resume"
-    title="Work experience"
+    title="Work Experience"
     items={[
       {
         title:
-          'Head of Engineering <br /> <span class="font-normal">SmartDev LLC</span> <br /> <span class="text-sm font-normal">Da Nang, Viet Nam</span> <br /> <span class="text-sm font-normal">Sep 2022 - Present</span>',
-        description: `
-        Being team lead and managing a dozen members team. Leading .NET Team becomes a most enthusiastic team, contributing to team members’ career path planning and growth, gaining more knowledge with the team. Joining the Head Of Technology Team helps the COO run groups in the technology aspect. <br />
-        ■ Define OKRs and help team members step out of their safe zone, gain more knowledge, and accomplishment daily project duty <br />
-        ■ Organizing 5+ DevOps workshops and inspiring DevOps culture in the ODC team. <br />
-        ■ Support freshers/juniors team build 2 most critical internal projects are SmartDev Platform and SmartDev App.<br />`,
+          'Principal Engineer <br /> <span class="text-sm font-normal">2024 — Present · Da Nang, Vietnam</span>',
+        description: `Driving architecture decisions and engineering excellence across the organization. Leading AI adoption strategy, establishing engineering standards, and mentoring senior engineers. Focused on building scalable, maintainable systems that enable rapid product iteration.`,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          '.NET Tech Lead & Head of Technology Group Member <br /> <span class="font-normal">SmartDev LLC</span> <br /> <span class="text-sm font-normal">Da Nang, Viet Nam</span> <br /> <span class="text-sm font-normal">Apr 2021 - Jul 2023</span>',
-        description: `
-        Migrating the Food Ordering System from .NET Framework to .NET Core with ABP Framework, Microservice ready architecture, and deploy on Azure Kubernetes Service with Terraform Infrastructure as Code. <br />
-        <br />
-        Key Achievements: <br />
-        ■ The current Food Ordering System is running in Ireland and will be deployed more to US and European countries with the NEXT system. <br />
-        ■ The monthly revenue of the system is 10M Euro and increasing <br />
-        ■ B2B system with 200+ users and supporting the sales across Ireland. <br />
-        <br />`,
+          'Head of Engineering & .NET Tech Lead <br /> <span class="font-normal">SmartDev LLC</span> <br /> <span class="text-sm font-normal">2021 — 2024 · Da Nang, Vietnam</span>',
+        description: `Led a 12+ member engineering team while serving on the Head of Technology leadership group. Migrated a critical Food Ordering System from .NET Framework to .NET Core with microservice architecture deployed on Azure Kubernetes Service (Terraform IaC). The system processes €10M/month in revenue across Ireland with 200+ B2B users. <br /><br />
+        Key achievements: <br />
+        ■ Organized 5+ DevOps workshops, driving DevOps culture adoption across ODC teams <br />
+        ■ Led junior team to build SmartDev Platform and SmartDev App (flagship internal products) <br />
+        ■ Defined OKRs and career growth paths for all team members`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Senior .NET Developer <br /> <span class="font-normal">MagicMemories</span> <br /> <span class="text-sm font-normal">2018 — 2021</span>',
+        description: `Architected and built MagicMemories OS v2 — a ground-up microservices platform powering digital transformation for the world's largest theme park photo company. Delivered significant cloud cost savings through infrastructure optimization and modern architecture patterns.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Software Developer <br /> <span class="text-sm font-normal">2013 — 2018</span>',
+        description: `Built full-stack web applications and Android apps across multiple domains. Developed strong foundations in .NET ecosystem, database design, and agile delivery. Progressive growth from junior to senior roles.`,
         icon: 'tabler:briefcase',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
 
-  <!-- Steps Widget ****************** -->
+  <!-- Education -->
 
   <Steps
-    id="resume"
     title="Education"
     items={[
       {
-        title: `Bachelor of Computer Science <br /> <span class="font-normal">Ho Chi Minh University of Science</span> <br /> <span class="text-sm font-normal">📅 2008 - 2013</span> <br /> <span class="text-xs font-normal"> Specialized in Computer Software Engineering, mastering the foundations that fuel innovative tech leadership today.</span>`,
+        title: `Bachelor of Computer Science <br /> <span class="font-normal">Ho Chi Minh University of Science (HCMUS)</span> <br /> <span class="text-sm font-normal">2008 — 2013</span>`,
+        description: 'Specialized in Software Engineering at one of Vietnam\'s top computer science programs. Built the foundation for a career spanning distributed systems, cloud architecture, and engineering leadership.',
         icon: 'tabler:school',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Skills -->
 
   <Features3
-    title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through technology and innovation."
+    title="Skills & Expertise"
+    subtitle="The tools and practices I bring to every project."
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Architecture',
-        description: 'Expert in designing scalable and efficient software architectures that drive business value.',
+        title: 'System Architecture',
+        description: 'Designing distributed systems, microservices, and event-driven architectures that handle millions in transaction volume.',
       },
       {
-        title: 'Communication',
-        description: 'Skilled in conveying complex technical concepts to both technical and non-technical stakeholders, ensuring clarity and alignment.',
+        title: 'Cloud & Infrastructure',
+        description: 'Azure, AWS, Kubernetes, Docker, Terraform — building and operating production infrastructure at scale.',
       },
       {
-        title: 'Code Review',
-        description: 'Proficient in conducting thorough code reviews to maintain high standards of code quality, performance, and security.',
+        title: 'Engineering Leadership',
+        description: 'Growing teams from 5 to 15+, defining career paths, running effective 1:1s, and building a culture of ownership.',
       },
       {
-        title: 'Cloud Solutions',
-        description: 'Experienced in migrating legacy systems to cloud-based environments, optimizing infrastructure, and implementing robust cloud strategies.',
+        title: '.NET & Backend',
+        description: '12+ years in the .NET ecosystem — from Framework to .NET 8, ABP, Entity Framework, gRPC, and high-performance APIs.',
       },
       {
-        title: 'Project Management',
-        description: 'Adept at leading cross-functional teams, managing projects from inception to completion, and ensuring successful delivery.',
+        title: 'AI & Automation',
+        description: 'Adopting AI into engineering workflows — from LLM integration to building intelligent automation pipelines.',
       },
       {
-        title: 'DevOps',
-        description: 'Proficient in implementing DevOps practices, including CI/CD pipelines, to enhance development efficiency and deployment speed.',
-      },
-      {
-        title: 'Team Leadership',
-        description: 'Proven ability to lead and mentor teams, fostering a culture of continuous learning and professional growth.',
-      },
-      {
-        title: 'Technical Solutions Consulting',
-        description: 'Skilled in providing technical solutions and consulting services, helping businesses transition to modern, cloud-based architectures.',
-      },
-      {
-        title: 'Agile Methodologies',
-        description: 'Proficient in applying Agile methodologies to manage software development projects, ensuring flexibility and responsiveness to change.',
+        title: 'DevOps & CI/CD',
+        description: 'GitHub Actions, Azure DevOps, Docker, Helm charts — automating everything from build to production deployment.',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- My Approach -->
+
+  <Features3
+    title="My Engineering Philosophy"
+    subtitle="Principles that guide how I build and lead."
+    columns={2}
+    defaultIcon="tabler:bulb"
+    items={[
+      {
+        title: 'Pragmatism Over Perfection',
+        description: 'Ship something that works, then iterate. The best architecture is the one your team can actually maintain.',
+      },
+      {
+        title: 'Teams > Technology',
+        description: 'A great team with average tools will outperform a mediocre team with the best stack. Invest in people first.',
+      },
+      {
+        title: 'Automate Everything',
+        description: 'If you do it twice, script it. If you do it three times, build a pipeline. Human time is too valuable for repetitive work.',
+      },
+      {
+        title: 'Learn in Public',
+        description: 'Share what you know, admit what you don\'t. The tech community grows when we teach each other openly.',
+      },
+    ]}
+  />
+
+  <!-- Portfolio -->
 
   <Content
-    id="porfolio"
-    title="Elevating visual narratives"
-    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
+    id="portfolio"
+    title="Featured Projects"
+    subtitle="Real systems, real impact."
     isReversed
     items={[
       {
-        title: 'Problem:',
+        title: 'Challenge:',
         description:
-          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
+          'Migrate a monolithic .NET Framework food ordering system to a modern, scalable architecture — without downtime — for a business processing €10M/month across Ireland.',
       },
       {
-        title: 'Solutions:',
+        title: 'Solution:',
         description:
-          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
+          'Designed and implemented a microservice architecture using .NET Core + ABP Framework, deployed on Azure Kubernetes Service with Terraform IaC. Built CI/CD pipelines for zero-downtime deployments across multiple regions.',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-      alt: 'Tech Design Image',
+      alt: 'Allsop RASP',
     }}
     callToAction={{
       target: '_blank',
-      text: 'Go to the project',
+      text: 'View project details',
       icon: 'tabler:chevron-right',
       href: './projects/allsop-rasp',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Allsop RASP: <br /><span class="text-2xl">Build a global food distribution management system with .NET Core, Azure Infrastructure</span>
+        Allsop RASP <br /><span class="text-2xl font-normal">Global food distribution management system</span>
       </h3>
     </Fragment>
 
@@ -244,36 +266,29 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
   <Content
     isReversed
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
+        title: 'Challenge:',
         description:
-          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
+          'MagicMemories needed to transform their legacy photo processing system into a cloud-native platform, reducing operational costs while scaling to handle theme park traffic spikes worldwide.',
       },
       {
-        title: 'Role:',
-        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
+        title: 'Solution:',
+        description:
+          'Built MagicMemories OS v2 from the ground up as a microservices system. Implemented event-driven architecture for real-time photo processing, optimized cloud resource utilization, and delivered significant cost savings.',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Art and Music Poster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
+      alt: 'MagicMemories OS v2',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        MagicMemories OS v2: <br /><span class="text-2xl">A microservices system build from ground to support MagicMemories digital transformation and cloud cost saving</span>
+        MagicMemories OS v2 <br /><span class="text-2xl font-normal">Microservices platform for digital transformation</span>
       </h3>
     </Fragment>
 
@@ -281,36 +296,30 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
 
   <Content
     isReversed
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
+        title: 'What it does:',
+        description:
+          'A self-hosted AI assistant that monitors 14 Telegram channels, tracks X/Twitter timelines, scrapes Reddit across 11 subreddits, performs daily stock & crypto technical analysis, and delivers hourly intelligence summaries.',
       },
       {
-        title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
+        title: 'Built with:',
+        description:
+          'Node.js, Python (yfinance, pandas, ta), Telegram API, X API, OpenClaw framework. Self-hosted on a $5/month VPS. Total monthly cost: $0 for core functionality.',
       },
     ]}
     image={{
-      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Fashion e-commerce Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
+      src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
+      alt: 'AI Assistant',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Ordrreat: <br /><span class="text-2xl">Realtime restaurance ordering system</span>
+        AI-Powered Intelligence Assistant <br /><span class="text-2xl font-normal">Weekend project that runs my information diet</span>
       </h3>
     </Fragment>
 
@@ -319,89 +328,30 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Testimonials Widget *********** -->
-
-  <Testimonials
-    title="Client testimonials"
-    subtitle="Discover what clients have to say about their experiences working with me."
-    testimonials={[
-      {
-        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
-        name: 'Mark Thompson',
-        job: 'Creative director',
-        image: {
-          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Mark Thompson Image',
-        },
-      },
-      {
-        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
-        name: 'Emily Martinez',
-        job: 'CEO',
-        image: {
-          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
-          alt: 'Emily Martinez Image',
-        },
-      },
-      {
-        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
-        name: 'Laura Simmons',
-        job: 'Founder of an NGO',
-        image: {
-          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Laura Simmons Image',
-        },
-      },
-      {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
-        name: 'Alex Foster',
-        job: 'Director of web services',
-        image: {
-          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Alex Foster Image',
-        },
-      },
-      {
-        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
-        name: 'Jessica Collins',
-        job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Jessica Collins Image',
-        },
-      },
-      {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
-        name: 'Michael Carter',
-        job: 'Event Coordinator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Michael Carter Image',
-        },
-      },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
+  <!-- CTA -->
 
   <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
+    title="Let's build something great"
+    subtitle="Whether you need architecture advice, engineering leadership, or just want to talk tech — I'm always up for a good conversation."
     actions={[
       {
         variant: 'primary',
-        text: 'Hire me',
-        href: '/',
+        text: 'Connect on LinkedIn',
+        href: 'https://www.linkedin.com/in/trankimhieu',
+      },
+      {
+        text: 'Follow on X',
+        href: 'https://x.com/hieutk_',
       },
     ]}
   />
 
-  <!-- BlogLatestPost Widget **************** -->
+  <!-- Blog -->
 
   <BlogLatestPosts
     id="blog"
-    title="Explore my insightful articles on my blog"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+    title="From the blog"
+    information="Thoughts on engineering, architecture, AI, and building things that matter."
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

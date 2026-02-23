@@ -2,7 +2,7 @@
 publishDate: 2026-02-22T00:00:00Z
 title: "I Built an AI Assistant in a Weekend That Monitors My Entire Information Diet"
 excerpt: "How I used OpenClaw, Node.js, and Python to create a self-hosted AI that tracks Telegram, X, Reddit, and performs daily stock analysis — for $0/month."
-image: https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80
+image: ~/assets/images/blog/ai-assistant-weekend.png
 category: Engineering
 tags:
   - ai

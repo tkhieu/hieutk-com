@@ -2,7 +2,7 @@
 publishDate: 2026-02-18T00:00:00Z
 title: "How I Led AI Adoption Across a 50+ Person Engineering Org"
 excerpt: "From skeptics to power users — the playbook I used to integrate AI tools into our development workflow at SmartDev, and why most AI adoption fails."
-image: https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80
+image: ~/assets/images/blog/ai-adoption-engineering-team.png
 category: Engineering
 tags:
   - ai

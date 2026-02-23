@@ -2,7 +2,7 @@
 publishDate: 2026-02-10T00:00:00Z
 title: "How We Rebuilt MagicMemories' Photo Platform from Monolith to Microservices"
 excerpt: "The story of transforming the world's largest theme park photo company's legacy system into a cloud-native microservices platform — and the hard lessons learned along the way."
-image: https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80
+image: ~/assets/images/blog/magicmemories-microservices.png
 category: Architecture
 tags:
   - architecture

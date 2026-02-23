@@ -2,7 +2,7 @@
 publishDate: 2026-02-15T00:00:00Z
 title: "Lessons from Migrating a €10M/Month Monolith to Microservices"
 excerpt: "What I learned leading a .NET Framework to .NET Core migration on Azure Kubernetes — without taking down a system that processes millions in food orders."
-image: https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80
+image: ~/assets/images/blog/migrating-monolith-microservices.png
 category: Architecture
 tags:
   - architecture

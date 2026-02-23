@@ -1,0 +1,216 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'MagicMemories OS v2 — Theme Park Photo Platform',
+  description: 'Case study: Rebuilding the world\'s largest theme park photo company\'s legacy system into a cloud-native microservices platform.',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero2
+    tagline="Case Study"
+    image={{
+      src: '~/assets/images/blog/magicmemories-microservices.png',
+      alt: 'MagicMemories OS v2',
+    }}
+  >
+    <Fragment slot="title">
+      MagicMemories OS v2<br /><span class="text-accent dark:text-white text-3xl">Theme Park Photo Platform — From Monolith to Microservices</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Rebuilding the operating system behind the world's largest theme park photo company — millions of photos daily, zero room for error.
+    </Fragment>
+  </Hero2>
+
+  <!-- The Challenge -->
+
+  <Content
+    title="The Challenge"
+    isReversed
+    items={[
+      {
+        title: 'Legacy monolith hitting its limits',
+        description: 'The existing system processed millions of photos daily across theme parks worldwide, but peak-hour delays, mounting cloud costs, and deployment anxiety were slowing the business down.',
+      },
+      {
+        title: 'Wildly different scaling needs',
+        description: 'A roller coaster produces 20+ photos in 3 seconds. A family browsing the storefront spends 15 minutes. These can\'t live in the same scaling model.',
+      },
+      {
+        title: 'Global operations across time zones',
+        description: 'Theme parks in Orlando, Tokyo, and Gold Coast don\'t share peak hours. The system needed to handle rolling traffic spikes 24/7 with data residency compliance.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1558008258-3256797b43f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=928&q=80',
+      alt: 'Challenge — Theme Park Operations',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- The Solution -->
+
+  <Features
+    title="The Solution"
+    subtitle="A ground-up rebuild: event-driven microservices designed for real-time photo processing at global scale."
+    columns={3}
+    items={[
+      {
+        title: 'Event-Driven Architecture',
+        description: 'Each photo flows through capture → processing → facial recognition → matching → storefront, with each stage as an independent service communicating via events.',
+        icon: 'tabler:arrows-split-2',
+      },
+      {
+        title: 'Kubernetes Auto-Scaling',
+        description: 'Services scale to zero during off-hours and spin up ahead of park opening times. No more paying for infrastructure handling zero traffic at 2 AM.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Multi-Region Deployment',
+        description: 'Photos stay in the region they were captured — reducing latency and complying with data residency requirements across continents.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Domain-Driven Design',
+        description: 'Service boundaries follow business domains (capture, matching, storefront, operations) — not technical layers. Everything clicked once we got this right.',
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Distributed Tracing',
+        description: 'A single photo\'s journey touches 6+ services. OpenTelemetry-powered observability makes debugging across the pipeline straightforward.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: '.NET Core + Azure',
+        description: 'Modern .NET Core services running on Azure Kubernetes Service with Terraform-managed infrastructure for repeatable deployments.',
+        icon: 'tabler:code',
+      },
+    ]}
+  />
+
+  <!-- My Role -->
+
+  <Steps
+    title="My Role"
+    items={[
+      {
+        title: 'Platform Architecture',
+        description: 'Designed the entire OS v2 architecture from scratch — service boundaries, event schemas, data flow, and infrastructure topology for multi-region deployment.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Photo Processing Pipeline',
+        description: 'Built the real-time pipeline handling millions of photos daily: capture ingestion, image processing, facial recognition matching, and storefront delivery.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Cloud Cost Optimization',
+        description: 'Replaced oversized always-on VMs with auto-scaling Kubernetes pods. Significant cloud cost reduction while handling higher peak loads.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Data Migration',
+        description: 'Migrated years of customer data, purchase history, and photo archives from the legacy system — while keeping both systems running simultaneously.',
+        icon: 'tabler:database',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Results -->
+
+  <Features
+    title="Results"
+    subtitle="Shipped to theme parks worldwide with measurable impact."
+    columns={3}
+    items={[
+      {
+        title: 'Millions of Photos/Day',
+        description: 'Processed across theme parks worldwide with sub-second latency from capture to storefront.',
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Global Scale',
+        description: 'Multi-region deployment serving parks in the US, Japan, and Australia — handling rolling peaks across time zones.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Cloud Costs Down',
+        description: 'Auto-scaling replaced over-provisioned VMs. Zero-traffic off-hours now cost nearly nothing.',
+        icon: 'tabler:trending-down',
+      },
+      {
+        title: 'Zero-Downtime Migration',
+        description: 'Parks worldwide switched from legacy to OS v2 with minimal disruption to operations.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: '50+ Pods Auto-Scaling',
+        description: 'Processing pods spin up at 9 AM park time, handle the morning rush, then quietly scale back down.',
+        icon: 'tabler:chart-arrows',
+      },
+      {
+        title: 'Ship with Confidence',
+        description: 'Engineers deploy features without fearing they\'ll break the photo pipeline. Observability + CI/CD changed the culture.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <!-- Hard Lessons -->
+
+  <Content
+    title="Hard Lessons Learned"
+    items={[
+      {
+        title: 'Event ordering matters more than you think',
+        description: '"Photo processed" sometimes arrived before "photo uploaded" was confirmed. We built proper event ordering and idempotency — after weeks of debugging.',
+      },
+      {
+        title: 'Observability is not optional',
+        description: 'We should have set up distributed tracing on day one, not month three. With 10+ services, you can\'t fix what you can\'t see.',
+      },
+      {
+        title: 'Domain boundaries are everything',
+        description: 'Our first attempt followed technical lines (API, processing, database). Wrong. The second attempt followed business domains. Everything clicked.',
+      },
+      {
+        title: 'Data migration is a project in itself',
+        description: 'Years of customer data, purchase history, and photo archives. Migrating while keeping both systems running was harder than building the new platform.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=928&q=80',
+      alt: 'Lessons learned',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    title="Interested in working together?"
+    subtitle="I help companies rebuild legacy systems into modern, scalable platforms — without breaking what's already working."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Connect on LinkedIn',
+        href: 'https://www.linkedin.com/in/trankimhieu',
+      },
+    ]}
+  />
+
+</Layout>
